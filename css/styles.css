@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+    gap: 10px;
+    text-align: right;
+    border-color: #7af706;
+    color: white;
+    background-color: black;
+
+}
+
+nav ul li {
+    margin: 3px;
+    border: 05px solid rgb(59, 241, 4);
+    padding: 5px;
+    color: black;
+    background-color: white;
+
+
+}
+   
+
+nav a {
+    text-decoration: none;
+    border: 05px solid rgb(48, 248, 8);
+    padding: 5px;
+    font-size: 1.5em;
+    color: white;
+    background-color:black;
+    
+    
+}
+
+nav a:hover {
+    display: flexbox;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    text-align: center;
+    color: rgb(23, 8, 245);
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+
+    
+}
+
+.nav-item {
+    position: relative;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 10px;
+    background-color: rgb(28, 12, 248);
+    top: 100%;
+    min-width: 50px;
+    z-index: 1000;
+}
+
+.nav-item:hover>.dropdown {
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown-btn :hover>.dropdown {
+    display: block;
+    flex-direction: column;
+}
+
+body {
+    background-image: url(../images/jv.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: rgb(7, 235, 235);
+}
+
+h1 {
+    float: top;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: garamond;
+    font-style: oblique;
+
+}
+
+h2 {
+    float: bottom;
+    font-size: 20px;
+    text-decoration: underline;
+    font-family: serif;
+    text-emphasis-color: blue;
+}
+
+p {
+    width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+li {
+    flex-direction: column;
+    float: top;
+    list-style-type: none;
+    font-style: italic;
+    padding: 6px;
+    margin-bottom: 4px;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+.imf {
+    text-align: center;
+
+}
+
+.pmf {
+    text-align: center;
+}
+
+.IBM {
+    text-align: center;
+}
+.spinner {
+    height: 50px;
+    width: 50px;
+    border: 5px solid #333;
+    border-top: 5px solid red;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@media screen and (max-width:600px) {
+    nav ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+ul li {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-top: 8px;
+    color: rgb(250, 11, 170);
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    outline: none;
+    border: none;
+    box-shadow: 0 0 8px rgba(0, 212, 255, 0.3);
+    align-items: center;
+}
+
+@keyframes spin{
+    0% {
+        transform:rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <script>
+        function validate(){
+             let s=document.forms["students"]["mark"].value;
+             if (s==""){
+                document.getElementById("msg").innerText="please fill the score";
+                return false;
+            }
+            if (s<0 || s>99){
+                document.getElementById("msg").innerText="Out of range";
+                return false;
+            }
+        }
+    </script>
+    </head>
+    <body>
+    <form name="students" action="/php/save.php" method="post" onsubmit="return validate()">
+    <p>Enter Score:
+       <input type="number" name="mark" id="score">
+          <span id="msg"></span></p>
+            <p>
+               <input type="submit" value="submit">
+            </p>
+        </form>
+    </body>
+</html>

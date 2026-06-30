@@ -1,0 +1,22 @@
+<!Doctype html>
+<html>
+    <body>
+<p id="one"></p>
+<p id="two"></p>
+        <script>
+            let student={
+                name:"Fortine Nkatha",
+                course:"Computer Science",
+                score:97,
+                getData:function(){
+                    return this.name+" "+this.course+" "+this.score;
+                }
+            };
+            document.getElementById("one").innerText=student.name;
+            console.log(student.course+"<p>");
+            console.log(student.getData());
+            document.getElementById("two").innerText=student.getData();
+
+        </script>
+    </body>
+</html>\
